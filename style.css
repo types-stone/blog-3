@@ -1,0 +1,499 @@
+/* Archivo: style.css */
+
+/* Reseteo General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Estilos generales */
+body {
+    background-color: #f4f4f4;
+    color: #0a0a0a;
+}
+
+header {
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 3rem 0;
+}
+
+header h1 {
+    font-size: 3rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-menu li {
+    margin: 0 1rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #00bcd4;
+}
+
+/* Underline Animation */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: #00bcd4;
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Contenido Principal */
+main {
+    padding: 2rem;
+}
+
+.blog-posts article {
+    background: #ffffff;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: 1px solid #ccc;
+}
+
+.blog-posts h2 {
+    font-size: 1.5rem;
+    margin: 1rem;
+}
+
+.blog-posts p {
+    font-size: 1rem;
+    margin: 1rem;
+}
+
+.contact {
+    background: #ffffff;
+    padding: 2rem;
+    border: 1px solid #ccc;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact label {
+    margin-top: 2rem;
+}
+
+.contact input,
+.contact textarea {
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.contact button {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    background-color: #4a4a4a;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #0a0a0a;
+    color: #ffffff;
+    border-top: 1px solid #ccc;
+}
+
+footer p {
+    margin: 10px 0;
+    color: #ffffff;
+}
+
+/* Social Media Icons */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.circle {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.facebook {
+    background-color: #3b5998;
+}
+
+.twitter {
+    background-color: #1da1f2;
+}
+
+.instagram {
+    background-color: #e1306c;
+}
+
+.linkedin {
+    background-color: #0077b5;
+}
+
+/* Blog Images */
+.blog-header-image {
+    display: block;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Estilo de entradas */
+.entry-title {
+    font-size: 2rem;
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.index-title {
+    font-size: 1.8rem;
+    color: #555;
+    text-align: left;
+    margin-top: 15px;
+}
+
+/* Contenedor principal para cada entrada del blog */
+.content-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Estilo para las imágenes */
+.entry-image {
+    width: 40%;
+    margin-right: 20px;
+    border-radius: 8px;
+}
+
+/* Contenedor del texto */
+.text-container {
+    width: 60%;
+}
+
+/* Estilo para pantallas pequeñas */
+@media (max-width: 768px) {
+    .content-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .entry-image {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .text-container {
+        width: 100%;
+    }
+}
+
+/* Estilo para los subtítulos de entradas de blog <h3> */
+.entry-page h3 {
+    font-size: 1.3rem;
+    color: #333;
+    margin: 3rem;
+}
+
+/* Estilo para los párrafos de entradas de blog <p> */
+.entry-page p {
+    font-size: 1rem;
+    line-height: 1.2;
+    color: #555;
+    margin: 3rem;
+}
+
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body, html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+/* Contact Section */
+.contact {
+    max-width: 1000px;
+    width: 100%;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Container and Photo */
+.contact-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.contact-photo {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-photo img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Contact Form */
+.contact-form {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin-bottom: 5px;
+    font-size: 1rem;
+    color: #555;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact-form button {
+    background-color: #b9b9b9;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 8px 16px;
+}
+
+.contact-form button:hover {
+    background-color: #6b6b6b;
+}
+/* Estilo para asegurar alineación del footer */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: #fff;
+    background-color: #0a0a0a;
+    border-top: 1px solid #ccc;
+    margin-top: auto;
+}
+/* Boton entradas index */
+.read-entry-button {
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 12px;
+    margin-right: 12px;
+    padding: 8px 16px;
+    background-color: #b9b9b9;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.read-entry-button:hover {
+    background-color: #6b6b6b;
+}
+
+/* Estilos generales del contenido principal */
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.entry-title {
+    font-size: 2em;
+    margin-top: 20px;
+}
+
+img.img-fluid {
+    width: 100%;
+    height: auto;
+    border-radius: 1%;
+}
+
+/* Estilos para títulos y párrafos */
+article h3 {
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+
+article p {
+    margin-top: 10px;
+}
+
+/* Responsive: Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    .entry-title {
+        font-size: 1.8em;
+        text-align: center;
+    }
+    article h3 {
+        font-size: 1.3em;
+    }
+    main {
+        padding: 15px;
+    }
+}
+
+/* Responsive: Ajustes para pantallas muy pequeñas (como teléfonos) */
+@media (max-width: 480px) {
+    .entry-title {
+        font-size: 1.5em;
+    }
+    article h3 {
+        font-size: 1.2em;
+    }
+    main {
+        padding: 10px;
+    }
+}
+
+
+
+
+
+/* Estructura Principal del Blog */
+.blog-layout {
+    display: flex;
+    flex-direction: column; /* Coloca las secciones en una sola columna */
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+.main-blog-content {
+    margin-bottom: 40px;
+}
+
+/* Módulo de Entradas Relacionadas */
+.related-entries h3 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.related-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas en pantallas grandes */
+    margin-top: 20px;
+}
+
+.related-item {
+    text-align: center;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.related-item:hover {
+    transform: translateY(-5px);
+}
+
+.related-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.related-title {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.related-intro {
+    font-size: 1em;
+    color: #666;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .related-grid {
+        grid-template-columns: 1fr; /* Una sola columna en dispositivos móviles */
+    }
+}
